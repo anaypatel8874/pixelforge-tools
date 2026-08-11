@@ -12,6 +12,11 @@ import PdfToPptx from './pages/PdfToPptx'
 import OcrPDF from './pages/OcrPDF'
 import MetadataViewer from './pages/MetadataViewer'
 import ComparePDF from './pages/ComparePDF'
+import ImagesToPdf from './pages/ImagesToPdf'
+import JpgToPdf from './pages/JpgToPdf'
+import PngToPdf from './pages/PngToPdf'
+import WebpToPdf from './pages/WebpToPdf'
+import BlankPdf from './pages/BlankPdf'
 
 export default function App() {
   return (
@@ -37,6 +42,14 @@ export default function App() {
         <Route path="/pdf-tools/ocr-pdf" element={<OcrPDF />} />
         <Route path="/pdf-tools/metadata" element={<MetadataViewer />} />
         <Route path="/pdf-tools/compare-pdf" element={<ComparePDF />} />
+
+        {/* Image → PDF single-feature tools */}
+        <Route path="/pdf-tools/images-to-pdf" element={<ImagesToPdf />} />
+        <Route path="/pdf-tools/jpg-to-pdf" element={<JpgToPdf />} />
+        <Route path="/pdf-tools/png-to-pdf" element={<PngToPdf />} />
+        <Route path="/pdf-tools/webp-to-pdf" element={<WebpToPdf />} />
+        <Route path="/pdf-tools/blank-pdf" element={<BlankPdf />} />
+
         {/* Additional routes will be added here */}
       </Routes>
     </div>
