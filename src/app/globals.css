@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: 250 250 252;
+    --bg-alt: 244 244 248;
+    --fg: 17 24 39;
+    --fg-muted: 75 85 99;
+    --border: 226 232 240;
+    --accent: 93 104 233;
+    --accent-strong: 68 71 214;
+  }
+
+  :root.dark {
+    --bg: 12 14 22;
+    --bg-alt: 22 24 35;
+    --fg: 237 240 247;
+    --fg-muted: 156 163 175;
+    --border: 38 41 56;
+    --accent: 132 143 242;
+    --accent-strong: 174 182 248;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[rgb(var(--bg))] text-[rgb(var(--fg))] antialiased;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  ::selection {
+    background: rgb(var(--accent) / 0.3);
+  }
+
+  *:focus-visible {
+    outline: 2px solid rgb(var(--accent));
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border bg-[rgb(var(--bg))] border-[rgb(var(--border))] shadow-sm;
+  }
+  .card-soft {
+    @apply rounded-2xl border border-[rgb(var(--border))] bg-[rgb(var(--bg-alt))]/40;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium transition;
+  }
+  .btn-primary {
+    @apply btn bg-brand-600 text-white hover:bg-brand-700 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply btn border border-[rgb(var(--border))] bg-[rgb(var(--bg))] text-[rgb(var(--fg))] hover:bg-[rgb(var(--bg-alt))];
+  }
+  .btn-ghost {
+    @apply btn text-[rgb(var(--fg-muted))] hover:bg-[rgb(var(--bg-alt))];
+  }
+  .input {
+    @apply w-full rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg))] px-3 py-2 text-sm focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/30;
+  }
+  .label {
+    @apply text-xs font-medium text-[rgb(var(--fg-muted))];
+  }
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full border border-[rgb(var(--border))] bg-[rgb(var(--bg-alt))] px-2.5 py-1 text-xs;
+  }
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand-600 to-fuchsia-600 bg-clip-text text-transparent;
+  }
+  .surface {
+    background-image:
+      radial-gradient(1200px 600px at 10% -10%, rgb(var(--accent) / 0.15), transparent 60%),
+      radial-gradient(800px 400px at 90% 0%, rgb(var(--accent) / 0.07), transparent 70%);
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: rgb(var(--border));
+    border-radius: 999px;
+  }
+  .skeleton {
+    background: linear-gradient(90deg, rgb(var(--bg-alt)), rgb(var(--border)), rgb(var(--bg-alt)));
+    background-size: 1000px 100%;
+    animation: shimmer 1.6s linear infinite;
+  }
+  .prose h1 { @apply mt-6 text-2xl font-semibold; }
+  .prose h2 { @apply mt-6 text-lg font-semibold; }
+  .prose p { @apply text-sm leading-relaxed text-[rgb(var(--fg-muted))]; }
+  .prose ul { @apply list-disc space-y-1 pl-5 text-sm text-[rgb(var(--fg-muted))]; }
+  .prose a { @apply text-brand-600 underline; }
+}

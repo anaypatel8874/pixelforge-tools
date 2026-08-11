@@ -1,0 +1,42 @@
+{
+  "name": "pixelforge-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Every Image Tool You Need - Fast, Free & Private",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "browser-image-compression": "^2.0.2",
+    "clsx": "^2.1.1",
+    "file-saver": "^2.0.5",
+    "heic2any": "^0.0.4",
+    "jspdf": "^2.5.2",
+    "jszip": "^3.10.1",
+    "lucide-react": "^0.460.0",
+    "next": "14.2.18",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.5.4",
+    "tesseract.js": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/file-saver": "^2.0.7",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@vitejs/plugin-react": "^4.3.3",
+    "autoprefixer": "^10.4.20",
+    "jsdom": "^30.0.1",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5",
+    "vitest": "^2.1.5"
+  }
+}
