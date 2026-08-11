@@ -4,6 +4,7 @@ import PDFToolsIndex from './pages/PDFToolsIndex'
 import MergePDF from './pages/MergePDF'
 import SplitPDF from './pages/SplitPDF'
 import CompressPDF from './pages/CompressPDF'
+import PdfToImage from './pages/PdfToImage'
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/pdf-tools/merge-pdf" element={<MergePDF />} />
         <Route path="/pdf-tools/split-pdf" element={<SplitPDF />} />
         <Route path="/pdf-tools/compress-pdf" element={<CompressPDF />} />
+        <Route path="/pdf-tools/pdf-to-jpg" element={<PdfToImage />} />
         {/* Additional routes will be added here */}
       </Routes>
     </div>

@@ -14,7 +14,7 @@ export default function PDFToolsIndex(){
           <li><Link to="/pdf-tools/merge-pdf">Merge PDF</Link></li>
           <li><Link to="/pdf-tools/split-pdf">Split PDF</Link></li>
           <li><Link to="/pdf-tools/compress-pdf">Compress PDF</Link></li>
-          <li><Link to="/pdf-tools/pdf-to-jpg">PDF → JPG</Link></li>
+          <li><Link to="/pdf-tools/pdf-to-jpg">PDF → JPG/PNG/WebP</Link></li>
         </ul>
       </section>
 
