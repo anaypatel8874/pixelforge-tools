@@ -22,6 +22,11 @@ export default function PDFToolsIndex(){
           <li><Link to="/pdf-tools/ocr-pdf">OCR PDF</Link></li>
           <li><Link to="/pdf-tools/metadata">Metadata Viewer</Link></li>
           <li><Link to="/pdf-tools/compare-pdf">Compare PDFs</Link></li>
+          <li><Link to="/pdf-tools/images-to-pdf">Images → PDF</Link></li>
+          <li><Link to="/pdf-tools/jpg-to-pdf">JPG → PDF</Link></li>
+          <li><Link to="/pdf-tools/png-to-pdf">PNG → PDF</Link></li>
+          <li><Link to="/pdf-tools/webp-to-pdf">WebP → PDF</Link></li>
+          <li><Link to="/pdf-tools/blank-pdf">Blank PDF</Link></li>
         </ul>
       </section>
 
