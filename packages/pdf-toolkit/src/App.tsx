@@ -2,6 +2,7 @@ import React from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 import PDFToolsIndex from './pages/PDFToolsIndex'
 import MergePDF from './pages/MergePDF'
+import SplitPDF from './pages/SplitPDF'
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/" element={<PDFToolsIndex />} />
         <Route path="/pdf-tools" element={<PDFToolsIndex />} />
         <Route path="/pdf-tools/merge-pdf" element={<MergePDF />} />
+        <Route path="/pdf-tools/split-pdf" element={<SplitPDF />} />
         {/* Additional routes will be added here */}
       </Routes>
     </div>
